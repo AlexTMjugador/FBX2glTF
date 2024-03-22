@@ -5,7 +5,7 @@ to the glTF file format.
 
 Change skinning-weights to 4 with `--skinning-weights 4`, if your engine does not support the 8 bone weights feature.
 
-Change the default import of the engine to be different from 30 fps if needed, with `--anim-framerate (bake24|bake30|bake60)`.
+Change the default import of the engine to be different from 30 fps if needed, with `--anim-framerate (bake20|bake24|bake30|bake60)`.
 
 ## License
 

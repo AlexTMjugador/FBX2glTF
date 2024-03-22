@@ -103,7 +103,9 @@ int main(int argc, char* argv[]) {
          "--anim-framerate",
          [&](std::vector<std::string> choices) -> bool {
            for (const std::string choice : choices) {
-             if (choice == "bake24") {
+             if (choice == "bake20") {
+               gltfOptions.animationFramerate = AnimationFramerateOptions::BAKE20;
+             } else if (choice == "bake24") {
                gltfOptions.animationFramerate = AnimationFramerateOptions::BAKE24;
              } else if (choice == "bake30") {
                gltfOptions.animationFramerate = AnimationFramerateOptions::BAKE30;
@@ -117,7 +119,7 @@ int main(int argc, char* argv[]) {
            return true;
          },
          "Select baked animation framerate.")
-      ->type_name("(bake24|bake30|bake60)");
+      ->type_name("(bake20|bake24|bake30|bake60)");
 
   const auto opt_flip_u = app.add_flag("--flip-u", "Flip all U texture coordinates.");
   const auto opt_no_flip_u = app.add_flag("--no-flip-u", "Don't flip U texture coordinates.");

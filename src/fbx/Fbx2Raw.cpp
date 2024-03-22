@@ -761,6 +761,10 @@ static void ReadNodeHierarchy(
 static void ReadAnimations(RawModel& raw, FbxScene* pScene, const GltfOptions& options) {
   FbxTime::EMode eMode = FbxTime::eFrames24;
   switch (options.animationFramerate) {
+    case AnimationFramerateOptions::BAKE20:
+      eMode = FbxTime::eCustom;
+      FbxTime::SetGlobalTimeMode(eMode, 20.0);
+      break;
     case AnimationFramerateOptions::BAKE24:
       eMode = FbxTime::eFrames24;
       break;

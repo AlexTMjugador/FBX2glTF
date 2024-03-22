@@ -69,6 +69,7 @@ enum class UseLongIndicesOptions {
 };
 
 enum class AnimationFramerateOptions {
+  BAKE20, // bake animations at 20 fps
   BAKE24, // bake animations at 24 fps
   BAKE30, // bake animations at 30 fps
   BAKE60, // bake animations at 60 fps
